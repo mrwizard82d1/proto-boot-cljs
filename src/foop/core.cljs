@@ -1,4 +1,6 @@
 (ns foop.core)
 
-(.log js/console "Hello, ClojureScript Boot World")
+(defn -main [& args]
+  (.log js/console "Hello, ClojureScript Boot World"))
 
+(set! *main-cli-fn* -main)
