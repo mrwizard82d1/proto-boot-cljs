@@ -1,0 +1,10 @@
+{:require [boot-cljs.core]
+ :init-fns [boot-cljs.core/-main]
+ ;; The call to path.resolve("."), which is used in ClojureScript's node shim, returns the directory in which node was
+ ;; invoked and **not** the directory that the generated `main.js` file resides. Because of this behavior, we need to
+ ;; override the `:asset-path` option of the compiler.
+ ;;
+ ;; For more information, see http://dev.clojure.org/jira/browse/CLJS-1444 for details.
+ ;;
+ :compiler-options {:target :nodejs
+                    :asset-path "target/main.out"}}

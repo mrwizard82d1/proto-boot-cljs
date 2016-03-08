@@ -1,4 +1,4 @@
-(ns foop.core)
+(ns boot-cljs.core)
 
 (defn -main [& args]
   (.log js/console "Hello, ClojureScript Boot World"))
